@@ -1,1 +1,1 @@
-web: sh target/classes/launch/* MainClass
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
