@@ -20,7 +20,7 @@ public class MainClass {
 
             tomcat.setPort(Integer.valueOf(webport));
 
-            StandardContext StandartContx = (StandardContext) tomcat.addWebapp("/",new File(webAppString).getAbsolutePath());
+            StandardContext StandartContx = (StandardContext) tomcat.addWebapp("",new File(webAppString).getAbsolutePath());
             System.out.println("configuring app with basedir: " + new File(webAppString).getAbsolutePath());
 
             File additionWebInfClasses = new File("target/classes");

@@ -1,1 +1,1 @@
-web: java target/classes/* MainClass.class
+web: sh target/bin/webapp
