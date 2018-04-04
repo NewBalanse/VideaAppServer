@@ -1,4 +1,4 @@
-package com.Api;
+package servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
