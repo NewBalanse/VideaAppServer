@@ -23,11 +23,11 @@
             <artifactId>tomcat-embed-core</artifactId>
             <version>${tomcat.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-jasper-el</artifactId>
             <version>${tomcat.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jasper</artifactId>
@@ -96,19 +96,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--For Deploy at the heroku plugin-->
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>2.0.3</version>
 
-                <configuration>
-                    <appName>WebApp</appName>
-                    <processTypes>
-                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* MainClass</web>
-                    </processTypes>
-                </configuration>
-            </plugin>
 
         </plugins>
     </build>
