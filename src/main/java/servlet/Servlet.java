@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @WebServlet(
         name = "MyServlet",
-        urlPatterns =  {"/home"}
+        urlPatterns =  {"/"}
 )
 public class Servlet extends HttpServlet {
 

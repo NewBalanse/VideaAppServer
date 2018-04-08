@@ -18,6 +18,7 @@ public class MainClass {
             if (webport == null || webport.trim().length() == 0)
                 webport = "8080";
 
+            
             tomcat.setPort(Integer.valueOf(webport));
 
             StandardContext StandartContx = (StandardContext) tomcat.addWebapp("",new File(webAppString).getAbsolutePath());
@@ -30,8 +31,7 @@ public class MainClass {
             StandartContx.setResources(resourceRoot);
 
             tomcat.start();
-            tomcat.getServer().wait();
-
+            tomcat.getServer().await();
         } catch (Exception e) {
             e.printStackTrace();
         }
